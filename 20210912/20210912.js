@@ -89,3 +89,22 @@ for (let i = 0; i < 10; i++) {
 }
 
 console.log(win + '勝' + loose + '敗' + draw + '引き分け');
+
+let total2021 = 0;
+
+let card = [1,2,3,'JOKER',4];
+
+console.log('card.length' + card.length);
+
+for (let i = 0; i < card.length; i++) {
+  console.log(card[i]);
+  // JOKER以外を数える
+  // JOKERのときは、合計せず、次のカードを引く
+  if (card[i] == 'JOKER') {
+    continue;
+  };
+  total2021 += card[i];
+  console.log('---' + total2021);
+}
+
+console.log(total2021);
