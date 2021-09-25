@@ -108,3 +108,35 @@ for (let i = 0; i < card.length; i++) {
 }
 
 console.log(total2021);
+
+console.log('----------');
+// 20210926 体重の入力を忘れた日は省いて平均値を出す。
+
+let weight = [97, 98, 99, '', 96, 97, 99, 98, '', 95, 98.8, 96, 98.9, '', 99];
+
+console.log(weight);
+
+console.log(weight[3]);
+
+console.log(weight[3] == '');
+
+
+let count = weight.length;
+let weightgokei = 0;
+
+for (let i = 0; i < weight.length; i++) {
+  if (weight[i] == '') {
+    weight[i] = 0;
+    count = count - 1;
+  }
+  console.log(i);
+  console.log(weight[i]);
+  weightgokei += weight[i];
+  console.log(weightgokei);
+
+}
+
+console.log(weightgokei);
+console.log(count);
+let heikin = weightgokei/count
+console.log(heikin);
